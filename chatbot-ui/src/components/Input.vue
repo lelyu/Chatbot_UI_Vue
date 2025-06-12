@@ -3,7 +3,7 @@
 	const inputValue = ref('')
 
 	const handleSubmit = () => {
-		console.log('User: ', inputValue.value)
+		console.log('User:', inputValue.value)
 		inputValue.value = ''
 	}
 </script>
@@ -16,8 +16,10 @@
 			v-model="inputValue"
 			type="text"
 			placeholder="Ask AI"
-			class="basis-3/4" />
-		<button type="submit" class="basis-1/4 bg-amber-600">Send</button>
+			class="basis-3/4 focus:outline-hidden" />
+		<button type="submit" class="cursor-pointer basis-1/4 bg-amber-600">
+			Send
+		</button>
 	</form>
 </template>
 
