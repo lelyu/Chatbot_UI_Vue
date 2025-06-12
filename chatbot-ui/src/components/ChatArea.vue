@@ -3,9 +3,8 @@
 </script>
 
 <template>
-	<div class="w-full h-full border-4 border-amber-400">
-		<h1>Chat Area</h1>
-		<p>Hi there let's chat!</p>
+	<div class="w-full h-full border-4 border-amber-400 p-2">
+		<p>Chat Area</p>
 	</div>
 </template>
 
