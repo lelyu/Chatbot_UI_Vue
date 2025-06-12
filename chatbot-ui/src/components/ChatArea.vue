@@ -5,6 +5,13 @@
 	import mockResponse from '../assets/mockResponse.json'
 
 	const chatHistory = ref([])
+	const userInput = ref('')
+
+	const handleMessageSubmit = () => {
+		chatHistory.value.push(userInput.value)
+		console.log('current chat history', chatHistory.value)
+		userInput.value = ''
+	}
 </script>
 
 <template>
@@ -15,7 +22,10 @@
 			<p class="text-2xl">Hello. Let's start chatting!</p>
 		</div>
 		<div v-else class="flex"></div>
-		<Input class="mt-auto" />
+		<Input
+			class="mt-auto"
+			v-model="userInput"
+			@submit="handleMessageSubmit" />
 	</div>
 </template>
 

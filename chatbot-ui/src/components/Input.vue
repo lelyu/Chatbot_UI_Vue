@@ -1,10 +1,9 @@
 <script setup>
 	import { ref } from 'vue'
-	const inputValue = ref('')
+	const inputValue = defineModel()
 
 	const handleSubmit = () => {
 		console.log('User:', inputValue.value)
-		inputValue.value = ''
 	}
 </script>
 
